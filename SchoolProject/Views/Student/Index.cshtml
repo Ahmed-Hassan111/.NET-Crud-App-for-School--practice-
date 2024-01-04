@@ -1,0 +1,42 @@
+﻿@using DemoEFApp.Models
+
+@model List<Student>
+
+<a class="btn btn-primary" asp-area="" asp-controller="Student" asp-action="Create">Add New Student</a> <br />
+
+  <table>
+      <tr>
+          <th>
+              Student Name
+          </th>
+          <th>
+              Student Age
+          </th>
+          <th>
+              Image
+          </th>
+        <th>
+            Delete
+        </th>
+
+      </tr>
+        @foreach (Student student in Model)
+        {
+            <tr>
+                <td>
+                    @student.StudentName
+                </td>
+                <td>
+                    @student.StudentAge
+                </td>
+                <td>
+                    <img src="/StudentImg/@student.ImgName" width="50" height="50"/>
+                </td>
+                <td>
+                <a asp-action="Delete" asp-route-StudentId="@student.StudentId">Delete</a>
+                </td>
+            </tr>
+        }
+    
+
+  </table>

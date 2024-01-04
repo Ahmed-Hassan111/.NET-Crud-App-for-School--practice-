@@ -1,0 +1,40 @@
+﻿
+
+<div class="container">
+    <form action="Create" method="post">
+        <div class="row">
+            <div class="col-25">
+                <label for="fname"> Teacher Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="TeacherName" name="TeacherName" placeholder="Teacher Name...." />
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="lname"> Age</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="TAge" name="TeacherAge" placeholder=" Age...." />
+
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Save" disabled id="save" class="btn btn-primary"/>
+        </div>
+
+    </form>
+    
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#TeacherName" ).on("change",function () {
+                var btnS = $("#save");
+                btnS.removeAttr("disabled");
+            });
+        });
+    </script>
+}

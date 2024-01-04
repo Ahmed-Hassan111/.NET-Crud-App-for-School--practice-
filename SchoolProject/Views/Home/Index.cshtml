@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+</div>
+
+
+
+
+<div class="container mt-auto mb-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Welcome to School Management System</h2>
+            <p>
+                Manage your teaching cycle in school.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="~/images/school_image.jpg" alt="School Image" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="row mt-5 mb-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Students</h5>
+                    <p class="card-text">Manage student information.</p>
+                    <a href="@Url.Action("Index", "Student")" class="btn btn-primary">Go to Students</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Teachers</h5>
+                    <p class="card-text">View and manage teacher details.</p>
+                    <a href="@Url.Action("Index", "Teacher")" class="btn btn-primary">Go to Teachers</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 ">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Courses</h5>
+                    <p class="card-text">Explore and manage available courses.</p>
+                    <a href="@Url.Action("Index", "Course")" class="btn btn-primary">Go to Courses</a>
+                </div>
+            </div>
+        </div>
+     
+        <div class="col-md-4 mt-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Rooms</h5>
+                    <p class="card-text">Explore and manage available Rooms.</p>
+                    <a href="@Url.Action("Index", "Room")" class="btn btn-primary">Go to Rooms</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

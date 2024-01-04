@@ -1,0 +1,44 @@
+﻿@using DemoEFApp.Models
+@model List<Teacher>
+
+<div class="container">
+    <form action="Create" method="post">
+        <div class="row">
+            <div class="col-25">
+                <label for="fname"> Course Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="CourseName" name="CourseName" placeholder="Course Name...." maxlength="10"/>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="lname"> Capacity </label>
+            </div>
+            <div class="col-75">
+                <input type="number" id="CourseCapacity" name="CourseCapacity" max="10" min="0"/>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="Teacher"> Select Teacher</label>
+            </div>
+            <div class="col-75">
+                <select id="TeacherId" name="TeacherId">
+                    @foreach(Teacher teacher in Model)
+                    {
+                        <option value="@teacher.TeacherId">@teacher.TeacherName</option>
+                    }
+                    
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <input class="btn btn-primary" type="submit" value="Save" />
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,38 @@
+﻿@using DemoEFApp.Models;
+@model SchoolProject.Models.ViewModels.StudentCourseVM
+
+<a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Back To Home Page</a> <br />
+<div class="container">
+    <form action="Register" method="post">
+        <div class="row">
+        <div class="col-25">
+            <label for="Teacher">Student</label>
+        </div>
+        <div class="col-75">
+               <select id="StudentId" name="StudentId">
+                    @foreach (Student student in Model.Students)
+                    {
+                        <option value="@student.StudentId"> @student.StudentName</option>
+                    }
+               
+               </select>
+           </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="Teacher">Courses</label>
+            </div>
+            <div class="col-75">
+                <select id="CourseId" name="CourseId">
+                    @foreach (Course course in Model.Courses)
+                    {
+                        <option value="@course.CourseId"> @course.CourseName</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <input class="btn btn-primary" type="submit" value="Save" />
+        </div>
+    </form>
+</div>

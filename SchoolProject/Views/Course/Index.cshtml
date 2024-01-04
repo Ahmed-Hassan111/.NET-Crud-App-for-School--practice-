@@ -1,0 +1,44 @@
+﻿@using DemoEFApp.Models
+
+@model List<Course>
+
+<a class="btn btn-primary" asp-area="" asp-controller="Course" asp-action="Create">Add New Course</a> <br />
+<table>
+    <tr>
+        <th> 
+            Course Name
+        </th>
+        <th>
+            Course Capacity
+        </th>
+        <th>
+            Delete
+        </th>
+    </tr>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (Course course in Model)
+            {
+                <tr>
+                    <td>@course.CourseName</td>
+                    <td>@course.CourseCapacity</td>
+                    <td>
+                        <a href="/Course/Delete/@course.CourseId">Delete @course.CourseName</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="3">
+                    <p>No Courses Available.</p>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+   
+
+

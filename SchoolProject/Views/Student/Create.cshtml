@@ -1,0 +1,62 @@
+﻿
+
+<div class="container">
+<form action="Create" method="post" enctype="multipart/form-data">
+
+    <div class="row">
+       <div class="col-25">
+           <label for="fname"> Student Name</label>
+    </div>
+    <div class="col-75">
+         <input type="text" id="StudentName" name="StudentName" placeholder="Your Name...." />
+
+    </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="lname"> Age</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="Age" name="StudentAge" placeholder="Your Age...." />
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="lname"> Is Active</label>
+            </div>
+            <div class="col-75">
+                <input type="checkbox" value="true" id="isActive" name="IsActive" checked />
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="lname"> Student Image </label>
+            </div>
+            <div class="col-75">
+                <input type="file" name="StudentImage" />
+
+            </div>
+        </div>
+
+        <div class="row">
+            <input class="btn btn-primary" type="submit" value="Save" id="save" disabled />
+        </div>
+
+</form>
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#StudentName").on("change", function () {
+                var btnS = $("#save");
+                btnS.removeAttr("disabled");
+            });
+        });
+    </script>
+}

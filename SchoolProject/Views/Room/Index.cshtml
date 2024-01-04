@@ -1,0 +1,28 @@
+﻿@using DemoEFApp.Models
+
+@model List<Room>
+
+<a class="btn btn-primary" asp-area="" asp-controller="Room" asp-action="Create">Add New Room</a> <br />
+<table>
+    <tr>
+        <th>
+            Room Name
+        </th>
+        <th>
+           Delete
+        </th>
+    </tr>
+    @foreach (Room room in Model)
+    {
+        <tr>
+            <td>
+                @room.RoomName
+            </td>
+            <td>
+                <a href="/Room/Delete/@room.RoomId"> Delete @room.RoomName </a>
+            </td>
+        </tr>
+    }
+
+
+</table>
