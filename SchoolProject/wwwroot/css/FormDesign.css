@@ -14,7 +14,7 @@ input[type=submit]:hover {
 }
 .container {
     border-radius: 5px;
-    background-color: #ccc;
+    background-color: white;
     padding: 20px;
 }
 .col-25 {
@@ -52,3 +52,6 @@ input[type=submit]:hover {
 .footer a:hover {
         text-decoration: underline; 
     }
+.card-body {
+    background-color: whitesmoke !important;
+}
