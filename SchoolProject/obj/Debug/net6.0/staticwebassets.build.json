@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5dVPGm17PVKQn7iX4HHWIK/1+FBUNoD3xrmNpsGOW8I=",
+  "Hash": "4cgXb6yahcEmPuaPejUhFg8sB+b9yhdRwQeNX9xijjw=",
   "Source": "SchoolProject",
   "BasePath": "_content/SchoolProject",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "F:\\c#\\SchoolProject\\SchoolProject\\wwwroot\\css\\style.css",
+      "SourceId": "SchoolProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\c#\\SchoolProject\\SchoolProject\\wwwroot\\",
+      "BasePath": "_content/SchoolProject",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
       "Identity": "F:\\c#\\SchoolProject\\SchoolProject\\wwwroot\\css\\Table.css",
       "SourceId": "SchoolProject",
       "SourceType": "Discovered",
@@ -117,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "F:\\c#\\SchoolProject\\SchoolProject\\wwwroot\\images\\favicon1.png",
+      "SourceId": "SchoolProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\c#\\SchoolProject\\SchoolProject\\wwwroot\\",
+      "BasePath": "_content/SchoolProject",
+      "RelativePath": "images/favicon1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\favicon1.png"
     },
     {
       "Identity": "F:\\c#\\SchoolProject\\SchoolProject\\wwwroot\\images\\school_image.jpg",

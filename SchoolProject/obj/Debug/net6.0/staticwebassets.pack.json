@@ -45,8 +45,16 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "F:\\c#\\SchoolProject\\SchoolProject\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
       "Id": "F:\\c#\\SchoolProject\\SchoolProject\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\c#\\SchoolProject\\SchoolProject\\wwwroot\\images\\favicon1.png",
+      "PackagePath": "staticwebassets\\images\\favicon1.png"
     },
     {
       "Id": "F:\\c#\\SchoolProject\\SchoolProject\\wwwroot\\images\\school_image.jpg",

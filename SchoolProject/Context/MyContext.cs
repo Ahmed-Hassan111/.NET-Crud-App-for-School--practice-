@@ -1,10 +1,12 @@
 ﻿using DemoEFApp.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using SchoolProject.Models;
 
 namespace DemoEFApp.Context
 {
-    public class MyContext : DbContext
+    public class MyContext : IdentityDbContext<ApplicationUser>
     {
         public MyContext(DbContextOptions<MyContext> myContext) : base(myContext)
         {

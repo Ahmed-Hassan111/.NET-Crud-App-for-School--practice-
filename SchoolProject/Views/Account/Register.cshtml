@@ -1,0 +1,47 @@
+﻿@model RegisterViewModel
+@{
+    //ViewData["Title"] = "Register Page";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">
+            Sign Up
+        </div>
+        <form asp-controller="Account" asp-action="Register" method="post">
+            <div class="field">
+                <input type="email" name="Email" required="">
+                <label>Email Address</label>
+            </div>
+            <div class="field">
+                <input type="password" name="Password" required="">
+                <label>Password</label>
+            </div>
+            <div class="field">
+                <input type="password" name="ConfirmPassword" required="">
+                <label>Confirm Password</label>
+            </div>
+            <div class="content">
+                <div class="checkbox">
+                    <input type="checkbox" asp-for="IsAgree" id="remember-me" required="">
+                    <label for="remember-me"> I Agree To The Terms & Conditions</label>
+                    </div>
+                </div>
+            <div class="field">
+                <input type="submit" value="Signup">
+            </div>
+            <div class="signup-link">
+                Already have an account? <a href="/Account/Login">Login</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
