@@ -1,4 +1,5 @@
 ﻿using DemoEFApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SchoolProject.Models.ViewModels;
 using SchoolProject.Repository;
@@ -7,6 +8,7 @@ using System.IO;
 
 namespace SchoolProject.Controllers
 {
+    //[Authorize]
     public class StudentController : Controller
     {
 

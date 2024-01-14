@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SchoolProject.Models;
 
 namespace SchoolProject.Controllers
 {
+    //[Authorize]
     public class AccountController : Controller
     {
         public UserManager<ApplicationUser> UserManager { get; }
@@ -72,10 +74,15 @@ namespace SchoolProject.Controllers
                 return View(model);
         }
 
-
-
         #endregion
         #region Signout
+
+        public async new Task<IActionResult> SignOut()
+        {
+            await SignInManager.SignOutAsync();
+            return RedirectToAction(nameof(Login));
+        }
+
         #endregion
 
 

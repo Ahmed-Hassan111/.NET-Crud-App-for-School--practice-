@@ -1,10 +1,12 @@
 ﻿using DemoEFApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SchoolProject.Repository;
 using SchoolProject.Respository;
 
 namespace SchoolProject.Controllers
 {
+    //[Authorize]
     public class RoomController : Controller
     {
         private readonly IRoomRepository _roomRepository;

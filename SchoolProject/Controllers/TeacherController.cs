@@ -1,9 +1,11 @@
 ﻿using DemoEFApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SchoolProject.Respository;
 
 namespace SchoolProject.Controllers
 {
+    //[Authorize]
     public class TeacherController : Controller
     {
         private readonly ITeacherRepository _teacherRepository;
