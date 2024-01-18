@@ -6,7 +6,7 @@ using SchoolProject.Respository;
 
 namespace SchoolProject.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class RoomController : Controller
     {
         private readonly IRoomRepository _roomRepository;

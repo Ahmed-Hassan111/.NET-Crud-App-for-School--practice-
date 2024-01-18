@@ -5,7 +5,7 @@ using SchoolProject.Respository;
 
 namespace SchoolProject.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class TeacherController : Controller
     {
         private readonly ITeacherRepository _teacherRepository;

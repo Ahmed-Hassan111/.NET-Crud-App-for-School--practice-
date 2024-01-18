@@ -2,13 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\SchoolProject",
-    "\\SchoolProject\\Controllers",
-    "\\SchoolProject\\wwwroot",
+    "\\SchoolProject\\Views",
+    "\\SchoolProject\\Views\\Shared",
     "\\SchoolProject\\wwwroot\\lib",
     "\\SchoolProject\\wwwroot\\lib\\bootstrap",
     "\\SchoolProject\\wwwroot\\lib\\bootstrap\\dist",
     "\\SchoolProject\\wwwroot\\lib\\bootstrap\\dist\\css"
   ],
-  "SelectedNode": "\\SchoolProject\\Controllers\\TeacherController.cs",
+  "SelectedNode": "\\SchoolProject\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

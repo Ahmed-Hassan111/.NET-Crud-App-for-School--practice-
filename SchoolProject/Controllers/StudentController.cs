@@ -8,7 +8,7 @@ using System.IO;
 
 namespace SchoolProject.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class StudentController : Controller
     {
 

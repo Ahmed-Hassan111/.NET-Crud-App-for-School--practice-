@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Common;
+using SchoolProject.Helpers;
 using SchoolProject.Models;
 
 namespace SchoolProject.Controllers
 {
-    //[Authorize]
+    [Authorize]
+    [AllowAnonymous]
     public class AccountController : Controller
     {
         public UserManager<ApplicationUser> UserManager { get; }
@@ -85,6 +88,70 @@ namespace SchoolProject.Controllers
 
         #endregion
 
+        #region Forget Password
+        public IActionResult ForgetPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ForgetPassword(ForgetPasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+               
+                var user = await UserManager.FindByEmailAsync(model.Email);
+                if (user != null)
+                {
+                    var token = await UserManager.GeneratePasswordResetTokenAsync(user);
+                    var resetPasswordLink = Url.Action("ResetPassword", "Account", new {Email=model.Email , Token = token} , Request.Scheme);
+                    var email = new Email()
+                    {
+                        Title = "Reset Password",
+                        To = model.Email,
+                        Body = resetPasswordLink
+                    };
+                    EmailSettings.SendEmail(email);
+                    return RedirectToAction(nameof(CompleteForgetPassword));
+                }
+                ModelState.AddModelError(string.Empty, "Email is not Existed!!");
+               
+            }
+            return View(model);
+        }
+        public IActionResult CompleteForgetPassword()
+        {
+            return View();
+        }
+        #endregion
+        #region Reset Password
+        public IActionResult ResetPassword(string email,string token)
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        {
+            if (ModelState.IsValid) 
+            {
+                var user = await UserManager.FindByEmailAsync(model.Email);
+                if (user != null)
+                {
+                    var result = await UserManager.ResetPasswordAsync(user, model.Token, model.NewPassword);
+                    if (result.Succeeded)
+                        return RedirectToAction(nameof(ResetPasswordDone));
+                    foreach(var error in result.Errors)
+                        ModelState.AddModelError(string.Empty,error.Description);
+                    return View(model);
+                }
+                ModelState.AddModelError(string.Empty, "This email is not existed");
+            }
+            return View(model);
+        }
+        public IActionResult ResetPasswordDone()
+        {
+            return View();
+        }
+        #endregion
 
     }
 }

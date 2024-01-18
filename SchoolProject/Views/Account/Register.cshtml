@@ -16,6 +16,7 @@
             Sign Up
         </div>
         <form asp-controller="Account" asp-action="Register" method="post">
+            <div asp-validation-summary="All"> </div>
             <div class="field">
                 <input type="email" name="Email" required="">
                 <label>Email Address</label>
